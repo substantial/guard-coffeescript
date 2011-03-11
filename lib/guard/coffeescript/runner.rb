@@ -76,8 +76,8 @@ module Guard
 
         def notify_result(changed_files, errors)
           if errors.empty?
-            message = "Successfully generated #{ changed_files.join(', ') }"
-            ::Guard::Notifier.notify(message, :title => 'CoffeeScript results')
+            #message = "Successfully generated #{ changed_files.join(', ') }"
+            #::Guard::Notifier.notify(message, :title => 'CoffeeScript results')
           else
             ::Guard::Notifier.notify(errors.join("\n"), :title => 'CoffeeScript results', :image => :failed)
           end
